@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxora – Interior Design & Architecture Studio</title>
+  <meta name="description" content="Luxora is a premium interior design and architecture studio specializing in bespoke residential and commercial interiors. Transform your space with elegance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== PRELOADER ========== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">LUXORA</div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ========== CURSOR ========== -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-outline"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">◆</span>
+        <span class="logo-text">LUXORA</span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="searchToggle" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-gold nav-cta">Get a Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== SEARCH OVERLAY ========== -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" id="searchClose">✕</button>
+    <div class="search-inner">
+      <p class="search-label">Search Our Work</p>
+      <input type="text" class="search-input" placeholder="Type and press enter..." />
+    </div>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero">
+    <div class="hero-slider" id="heroSlider">
+      <!-- Slide 1 -->
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=85')">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-sub animate-up delay-1">Premium Interior Studio</p>
+          <h1 class="hero-title animate-up delay-2">Design Your Dream<br/><em>Living Space</em></h1>
+          <p class="hero-desc animate-up delay-3">We craft bespoke interiors that blend timeless elegance with modern function — spaces that tell your unique story.</p>
+          <div class="hero-btns animate-up delay-4">
+            <a href="#portfolio" class="btn btn-gold">Explore Work</a>
+            <a href="#contact" class="btn btn-outline-white">Get Started</a>
+          </div>
+        </div>
+        <div class="hero-scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=1920&q=85')">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-sub animate-up delay-1">Award-Winning Designs</p>
+          <h1 class="hero-title animate-up delay-2">Elevate Every<br/><em>Room You Love</em></h1>
+          <p class="hero-desc animate-up delay-3">From concept to completion, our designers bring visionary ideas to life with meticulous craftsmanship.</p>
+          <div class="hero-btns animate-up delay-4">
+            <a href="#about" class="btn btn-gold">Our Story</a>
+            <a href="#services" class="btn btn-outline-white">Our Services</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=85')">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-sub animate-up delay-1">Architectural Excellence</p>
+          <h1 class="hero-title animate-up delay-2">Spaces That<br/><em>Inspire & Endure</em></h1>
+          <p class="hero-desc animate-up delay-3">Each project is a collaboration — we listen, design, and deliver spaces that surpass your imagination.</p>
+          <div class="hero-btns animate-up delay-4">
+            <a href="#services" class="btn btn-gold">What We Do</a>
+            <a href="#team" class="btn btn-outline-white">Meet the Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Slider Controls -->
+    <div class="hero-controls">
+      <button class="hero-btn hero-prev" id="heroPrev" aria-label="Previous slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="hero-dots" id="heroDots">
+        <button class="dot active" data-slide="0"></button>
+        <button class="dot" data-slide="1"></button>
+        <button class="dot" data-slide="2"></button>
+      </div>
+      <button class="hero-btn hero-next" id="heroNext" aria-label="Next slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <!-- Hero Numbers -->
+    <div class="hero-numbers">
+      <div class="hero-num-item">
+        <span class="num">350+</span>
+        <span class="label">Projects Done</span>
+      </div>
+      <div class="hero-num-item">
+        <span class="num">12+</span>
+        <span class="label">Years Experience</span>
+      </div>
+      <div class="hero-num-item">
+        <span class="num">98%</span>
+        <span class="label">Client Satisfaction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURE CARDS ========== -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card" data-aos="slide-up" data-aos-delay="0">
+          <div class="feature-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 50L32 14l24 36H8z"/><line x1="32" y1="14" x2="32" y2="50"/>
+              <line x1="20" y1="32" x2="44" y2="32"/>
+            </svg>
+          </div>
+          <h3>Architecture</h3>
+          <p>Bold structural forms that define space and inspire movement through every room.</p>
+          <a href="#services" class="feature-link">Discover More <span>→</span></a>
+        </div>
+        <div class="feature-card" data-aos="slide-up" data-aos-delay="150">
+          <div class="feature-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="10" y="10" width="44" height="44" rx="2"/>
+              <path d="M10 30h44M30 10v44"/>
+              <circle cx="32" cy="32" r="8"/>
+            </svg>
+          </div>
+          <h3>Interior Design</h3>
+          <p>Curated aesthetics that fuse personal taste with cutting-edge design principles.</p>
+          <a href="#services" class="feature-link">Discover More <span>→</span></a>
+        </div>
+        <div class="feature-card" data-aos="slide-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 52V28L32 12l20 16v24"/>
+              <rect x="24" y="36" width="16" height="16"/>
+              <path d="M20 28h8M36 28h8"/>
+            </svg>
+          </div>
+          <h3>Home Concept</h3>
+          <p>End-to-end home concepts brought to life with precision and artistic finesse.</p>
+          <a href="#services" class="feature-link">Discover More <span>→</span></a>
+        </div>
+        <div class="feature-card" data-aos="slide-up" data-aos-delay="450">
+          <div class="feature-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="32" cy="32" r="20"/>
+              <path d="M32 12v8M32 44v8M12 32h8M44 32h8"/>
+              <circle cx="32" cy="32" r="6"/>
+            </svg>
+          </div>
+          <h3>Decoration</h3>
+          <p>Thoughtful decorative elements that add soul and character to every corner.</p>
+          <a href="#services" class="feature-link">Discover More <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-images" data-aos="fade-right">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=700&q=85" alt="Luxury living room interior" loading="lazy" />
+        </div>
+        <div class="about-img-secondary">
+          <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=400&q=85" alt="Modern kitchen design" loading="lazy" />
+          <div class="about-badge">
+            <span class="badge-num">12</span>
+            <span class="badge-text">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content" data-aos="fade-left">
+        <p class="section-label">About Us</p>
+        <h2 class="section-title">We Turn Vision Into <em>Breathtaking Reality</em></h2>
+        <p class="about-text">At Luxora, we believe great design starts with listening. Our team of award-winning interior designers and architects work closely with each client to understand their lifestyle, preferences, and aspirations — then we craft spaces that reflect their unique identity.</p>
+        <p class="about-text">Founded in 2012, we've completed over 350 projects across residential, commercial, and hospitality sectors, earning a reputation for flawless execution and timeless taste.</p>
+        <div class="about-features">
+          <div class="about-feature-item">
+            <div class="af-icon">✦</div>
+            <div>
+              <h4>Personalized Approach</h4>
+              <p>Every design is tailored to your individual vision and needs.</p>
+            </div>
+          </div>
+          <div class="about-feature-item">
+            <div class="af-icon">✦</div>
+            <div>
+              <h4>Premium Materials</h4>
+              <p>We source only the finest materials from trusted global suppliers.</p>
+            </div>
+          </div>
+          <div class="about-feature-item">
+            <div class="af-icon">✦</div>
+            <div>
+              <h4>On-Time Delivery</h4>
+              <p>We pride ourselves on delivering projects on schedule and within budget.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#portfolio" class="btn btn-gold">View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-label light">What We Offer</p>
+        <h2 class="section-title light">Our Premium <em>Design Services</em></h2>
+        <p class="section-desc light">Comprehensive interior and architectural solutions tailored to elevate your living and working environments.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <span class="service-num">01</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 56V24L32 8l24 16v32"/>
+              <rect x="22" y="36" width="20" height="20"/>
+              <path d="M16 24h6M42 24h6M16 36h6M42 36h6"/>
+            </svg>
+          </div>
+          <h3>Residential Design</h3>
+          <p>Complete home transformations — from living rooms and bedrooms to kitchens and bathrooms.</p>
+          <div class="service-footer">
+            <span>24 Projects</span>
+            <a href="#portfolio" class="service-link">→</a>
+          </div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="service-num">02</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="18" width="52" height="38"/>
+              <path d="M6 18L32 6l26 12"/>
+              <rect x="18" y="30" width="28" height="26"/>
+              <line x1="32" y1="30" x2="32" y2="56"/>
+            </svg>
+          </div>
+          <h3>Commercial Spaces</h3>
+          <p>Office, retail, and hospitality interiors that communicate your brand with style and purpose.</p>
+          <div class="service-footer">
+            <span>38 Projects</span>
+            <a href="#portfolio" class="service-link">→</a>
+          </div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="service-num">03</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M10 54L32 10l22 44H10z"/>
+              <path d="M24 38h16M20 46h24"/>
+              <circle cx="32" cy="26" r="4"/>
+            </svg>
+          </div>
+          <h3>Architecture</h3>
+          <p>Structural design that harmonizes form and function across residential and commercial builds.</p>
+          <div class="service-footer">
+            <span>18 Projects</span>
+            <a href="#portfolio" class="service-link">→</a>
+          </div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="service-num">04</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="32" cy="32" r="22"/>
+              <path d="M32 10v44M10 32h44"/>
+              <path d="M22 14c0 10 20 10 20 20s-20 10 -20 20"/>
+            </svg>
+          </div>
+          <h3>Furniture Curation</h3>
+          <p>Bespoke furniture selection and custom pieces that complete any interior with harmony.</p>
+          <div class="service-footer">
+            <span>52 Projects</span>
+            <a href="#portfolio" class="service-link">→</a>
+          </div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <span class="service-num">05</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="8" y="8" width="48" height="48" rx="4"/>
+              <path d="M8 22h48M22 8v48"/>
+              <circle cx="38" cy="38" r="8"/>
+              <path d="M34 38h8M38 34v8"/>
+            </svg>
+          </div>
+          <h3>3D Visualization</h3>
+          <p>Photorealistic 3D renders so you can experience your space before a single wall is painted.</p>
+          <div class="service-footer">
+            <span>80 Projects</span>
+            <a href="#portfolio" class="service-link">→</a>
+          </div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <span class="service-num">06</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M32 6l4 12h14L39 26l5 14-12-8-12 8 5-14-11-8h14z"/>
+              <circle cx="32" cy="44" r="14"/>
+            </svg>
+          </div>
+          <h3>Lighting Design</h3>
+          <p>Strategic lighting schemes that amplify ambiance and highlight architectural features.</p>
+          <div class="service-footer">
+            <span>45 Projects</span>
+            <a href="#portfolio" class="service-link">→</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PORTFOLIO ========== -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-label">Our Work</p>
+        <h2 class="section-title">Latest <em>Projects</em></h2>
+      </div>
+      <div class="portfolio-filter" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="furniture">Furniture</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item" data-category="residential" data-aos="zoom-in" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Modern Penthouse" loading="lazy"/>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <span class="portfolio-cat">Residential</span>
+              <h3>The Penthouse Suite</h3>
+              <a href="#" class="portfolio-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item large" data-category="commercial" data-aos="zoom-in" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Corporate Office" loading="lazy"/>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <span class="portfolio-cat">Commercial</span>
+              <h3>Corporate Skyline HQ</h3>
+              <a href="#" class="portfolio-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="residential" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&q=80" alt="Modern Bedroom" loading="lazy"/>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <span class="portfolio-cat">Residential</span>
+              <h3>Serene Master Bedroom</h3>
+              <a href="#" class="portfolio-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item tall" data-category="architecture" data-aos="zoom-in" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80" alt="Architecture" loading="lazy"/>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <span class="portfolio-cat">Architecture</span>
+              <h3>The Glass Villa</h3>
+              <a href="#" class="portfolio-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="furniture" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Living Room" loading="lazy"/>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <span class="portfolio-cat">Furniture</span>
+              <h3>Curated Living Room</h3>
+              <a href="#" class="portfolio-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="commercial" data-aos="zoom-in" data-aos-delay="250">
+          <img src="https://images.unsplash.com/photo-1579631542720-3a87824834f4?w=600&q=80" alt="Restaurant" loading="lazy"/>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <span class="portfolio-cat">Commercial</span>
+              <h3>Fine Dining Concept</h3>
+              <a href="#" class="portfolio-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="residential" data-aos="zoom-in" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80" alt="Kitchen" loading="lazy"/>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <span class="portfolio-cat">Residential</span>
+              <h3>Gourmet Kitchen</h3>
+              <a href="#" class="portfolio-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="architecture" data-aos="zoom-in" data-aos-delay="350">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" alt="Modern house" loading="lazy"/>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <span class="portfolio-cat">Architecture</span>
+              <h3>Minimalist Estate</h3>
+              <a href="#" class="portfolio-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-cta" data-aos="fade-up">
+        <a href="#contact" class="btn btn-bordered">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS / COUNTER ========== -->
+  <section class="stats-section">
+    <div class="stats-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=60')"></div>
+    <div class="stats-overlay"></div>
+    <div class="container stats-grid">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+        <span class="stat-num" data-count="350">0</span><span class="stat-plus">+</span>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="150">
+        <span class="stat-num" data-count="280">0</span><span class="stat-plus">+</span>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+        <span class="stat-num" data-count="24">0</span>
+        <p>Expert Designers</p>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="450">
+        <span class="stat-num" data-count="12">0</span><span class="stat-plus">+</span>
+        <p>Years of Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-label">How We Work</p>
+        <h2 class="section-title">Our <em>Design Process</em></h2>
+        <p class="section-desc">A transparent, collaborative journey from the first conversation to the final installation.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+          <div class="process-num">01</div>
+          <div class="process-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M32 12a20 20 0 110 40 20 20 0 010-40z"/>
+              <path d="M32 24v8l6 6"/>
+            </svg>
+          </div>
+          <h3>Discovery Call</h3>
+          <p>We begin by understanding your vision, lifestyle, and budget through an in-depth consultation.</p>
+        </div>
+        <div class="process-connector" data-aos="fade-up" data-aos-delay="50">→</div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-num">02</div>
+          <div class="process-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="10" y="10" width="44" height="44" rx="2"/>
+              <path d="M10 22h44M22 10v44M34 22v32"/>
+            </svg>
+          </div>
+          <h3>Concept Design</h3>
+          <p>Our designers draft mood boards, space plans, and 2D layouts for your review and feedback.</p>
+        </div>
+        <div class="process-connector" data-aos="fade-up" data-aos-delay="150">→</div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-num">03</div>
+          <div class="process-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 52L52 12M12 28l16 16 24-24"/>
+            </svg>
+          </div>
+          <h3>3D Visualization</h3>
+          <p>Experience your space in photorealistic 3D before anything is built or purchased.</p>
+        </div>
+        <div class="process-connector" data-aos="fade-up" data-aos-delay="250">→</div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-num">04</div>
+          <div class="process-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 56V24L32 8l24 16v32H8z"/>
+              <path d="M24 56V40h16v16"/>
+            </svg>
+          </div>
+          <h3>Execution</h3>
+          <p>We manage every detail of the build — sourcing, contractors, and quality control — to perfection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TEAM ========== -->
+  <section id="team" class="team-section">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-label">The People</p>
+        <h2 class="section-title">Meet Our <em>Expert Team</em></h2>
+        <p class="section-desc">A passionate team of designers, architects, and project managers dedicated to extraordinary work.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="James Harrington" loading="lazy"/>
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Twitter">𝕏</a>
+                <a href="#" aria-label="Instagram">◎</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>James Harrington</h3>
+            <span>Lead Architect</span>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Sophia Reyes" loading="lazy"/>
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Twitter">𝕏</a>
+                <a href="#" aria-label="Instagram">◎</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Sophia Reyes</h3>
+            <span>Creative Director</span>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Marcus Chen" loading="lazy"/>
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Twitter">𝕏</a>
+                <a href="#" aria-label="Instagram">◎</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Marcus Chen</h3>
+            <span>Interior Designer</span>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Elena Vasquez" loading="lazy"/>
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Twitter">𝕏</a>
+                <a href="#" aria-label="Instagram">◎</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Elena Vasquez</h3>
+            <span>3D Visualization Lead</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <p class="section-label light">Client Stories</p>
+        <h2 class="section-title light">What Our <em>Clients Say</em></h2>
+      </div>
+      <div class="testimonial-slider" id="testimonialSlider" data-aos="fade-up">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-slide">
+            <div class="quote-icon">❝</div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"Working with Luxora was an absolute dream. They transformed our outdated apartment into a magazine-worthy home that feels completely us. The attention to detail and constant communication made the whole process stress-free."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&q=80" alt="Alexander Mitchell" loading="lazy"/>
+              <div>
+                <strong>Alexander Mitchell</strong>
+                <span>Homeowner, New York</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="quote-icon">❝</div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"We engaged Luxora for our flagship retail store and the result exceeded all expectations. Foot traffic increased by 40% within the first month. Their commercial design expertise is unmatched — highly recommend."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Natalie Park" loading="lazy"/>
+              <div>
+                <strong>Natalie Park</strong>
+                <span>CEO, Park Retail Group</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="quote-icon">❝</div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"The 3D visualization alone was worth every penny — we could see and approve our new home before any work began. The final result was pixel-perfect to the render. Luxora delivers what they promise."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="David Kowalski" loading="lazy"/>
+              <div>
+                <strong>David Kowalski</strong>
+                <span>Property Developer, Chicago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="t-btn t-prev" id="tPrev">←</button>
+          <div class="t-dots">
+            <span class="t-dot active"></span>
+            <span class="t-dot"></span>
+            <span class="t-dot"></span>
+          </div>
+          <button class="t-btn t-next" id="tNext">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Let's Create Something <em>Beautiful</em></h2>
+        <p class="contact-desc">Ready to transform your space? Reach out for a complimentary 30-minute consultation with our lead designer.</p>
+        <div class="contact-details">
+          <div class="contact-detail-item">
+            <div class="cd-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Studio Address</strong>
+              <p>142 Design Avenue, SoHo<br/>New York, NY 10012</p>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="cd-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 4.18 2 2 0 014.98 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <p>+1 (212) 555-0147<br/>+1 (212) 555-0183</p>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="cd-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <p>hello@luxoradesign.com<br/>projects@luxoradesign.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="#" class="social-link" aria-label="Instagram">◎</a>
+          <a href="#" class="social-link" aria-label="Pinterest">𝙥</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+        </div>
+      </div>
+      <div class="contact-form-wrap" data-aos="fade-left">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>Residential Design</option>
+              <option>Commercial Spaces</option>
+              <option>Architecture</option>
+              <option>Furniture Curation</option>
+              <option>3D Visualization</option>
+              <option>Lighting Design</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loader hidden">Sending...</span>
+          </button>
+          <p class="form-success hidden" id="formSuccess">✓ Thank you! We'll be in touch within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col footer-about">
+          <a href="#" class="footer-logo">
+            <span class="logo-icon">◆</span>
+            <span class="logo-text">LUXORA</span>
+          </a>
+          <p>We craft premium interiors that transform how you live, work, and experience space. Beauty. Function. Elegance.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="Pinterest">𝙥</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Residential Design</a></li>
+            <li><a href="#services">Commercial Spaces</a></li>
+            <li><a href="#services">Architecture</a></li>
+            <li><a href="#services">3D Visualization</a></li>
+            <li><a href="#services">Lighting Design</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h4>Stay Inspired</h4>
+          <p>Get design tips, project updates, and exclusive insights delivered to your inbox.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+          <div class="footer-contact-quick">
+            <p>📞 +1 (212) 555-0147</p>
+            <p>✉ hello@luxoradesign.com</p>
+            <p>📌 142 Design Ave, New York</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2024 Luxora Design Studio. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCROLL TO TOP ========== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
